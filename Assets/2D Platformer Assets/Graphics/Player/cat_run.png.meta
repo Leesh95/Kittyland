@@ -1,25 +1,7 @@
 fileFormatVersion: 2
-guid: e584515e5484cf8449d6aaaef8f6c4f0
+guid: 2fbaa5e9145d8e84793d3cd990755cc5
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4632356295389231455
-    second: player-run_0
-  - first:
-      213: 7033462948650731188
-    second: player-run_1
-  - first:
-      213: -1354855211706149794
-    second: player-run_2
-  - first:
-      213: 2930517805428572220
-    second: player-run_3
-  - first:
-      213: -6483859422320259540
-    second: player-run_4
-  - first:
-      213: -1816464892596948651
-    second: player-run_5
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -80,11 +62,11 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -96,10 +78,34 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,7 +117,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player-run_0
+      name: cat_run_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9002ad0dfd29564492e5e05df15a646
-      internalID: -4632356295389231455
+      spriteID: 1d92a954dda62f1429d553bdca619ba7
+      internalID: -127668602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-run_1
+      name: cat_run_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 40
         y: 0
-        width: 32
-        height: 32
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40a07790816a08740b758e5b93930f58
-      internalID: 7033462948650731188
+      spriteID: 418ec22510e57484c8dcd7c6a99c66bb
+      internalID: 89157107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-run_2
+      name: cat_run_2
       rect:
         serializedVersion: 2
-        x: 66
+        x: 80
         y: 0
-        width: 32
-        height: 32
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 118fcc0dedeaf7a43a81c7ac922f2c91
-      internalID: -1354855211706149794
+      spriteID: 25ad5c8c374e58545b7ab04c4aeda70d
+      internalID: -1900191148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-run_3
+      name: cat_run_3
       rect:
         serializedVersion: 2
-        x: 99
+        x: 120
         y: 0
-        width: 32
-        height: 32
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,50 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21c846bee6fa4f0459f09ba0caa44e34
-      internalID: 2930517805428572220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player-run_4
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3937e844c16be9143897f5286a377c1c
-      internalID: -6483859422320259540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player-run_5
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c341ebf0e85b0854da7838bf6ce68cfb
-      internalID: -1816464892596948651
+      spriteID: 1d3268b3805d901418549ce0b11a14f1
+      internalID: -489586997
       vertices: []
       indices: 
       edges: []
@@ -258,12 +222,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player-run_4: -6483859422320259540
-      player-run_0: -4632356295389231455
-      player-run_3: 2930517805428572220
-      player-run_1: 7033462948650731188
-      player-run_5: -1816464892596948651
-      player-run_2: -1354855211706149794
+      cat_run_2: -1900191148
+      cat_run_0: -127668602
+      cat_run_3: -489586997
+      cat_run_1: 89157107
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
