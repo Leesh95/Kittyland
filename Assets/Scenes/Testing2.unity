@@ -3552,6 +3552,14 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 416283639, guid: 221137f3c83c589428deed01b4b235b7, type: 3}
+      propertyPath: invincibleLength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064775994778790680, guid: 221137f3c83c589428deed01b4b235b7, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2064775994778790681, guid: 221137f3c83c589428deed01b4b235b7, type: 3}
       propertyPath: m_RootOrder
       value: 3
