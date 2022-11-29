@@ -13,12 +13,17 @@ public class UIController : MonoBehaviour
         heartHalf,
         heartEmpty;
 
+    public Text gemText;
+
     private void Awake()
     {
         instance = this;
     }
 
-    void Start() { }
+    void Start()
+    {
+        UpdateGemCount();
+    }
 
     void Update() { }
 
@@ -82,5 +87,10 @@ public class UIController : MonoBehaviour
 
                 break;
         }
+    }
+
+    public void UpdateGemCount()
+    {
+        gemText.text = LevelManager.instance.gemsCollected.ToString();
     }
 }
