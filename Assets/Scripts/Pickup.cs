@@ -8,6 +8,8 @@ public class Pickup : MonoBehaviour
         isHeal;
     private bool isCollected;
 
+    public GameObject pickupEffect;
+
     void Start() { }
 
     // Update is called once per frame
@@ -24,6 +26,8 @@ public class Pickup : MonoBehaviour
                 isCollected = true;
                 Destroy(gameObject);
 
+                Instantiate(pickupEffect, transform.position, transform.rotation);
+
                 UIController.instance.UpdateGemCount();
             }
             if (isHeal)
@@ -37,6 +41,8 @@ public class Pickup : MonoBehaviour
 
                     isCollected = true;
                     Destroy(gameObject);
+
+                    Instantiate(pickupEffect, transform.position, transform.rotation);
                 }
             }
         }
