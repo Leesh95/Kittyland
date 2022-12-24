@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private float knockBackCounter;
 
     public float bounceForce;
+    public bool stopInput;
 
     private void Awake()
     {
@@ -34,53 +35,59 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (knockBackCounter <= 0)
+        if (!PauseMenu.instance.isPaused && !stopInput)
         {
-            theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), theRB.velocity.y);
-
-            isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
-
-            if (isGrounded)
+            if (knockBackCounter <= 0)
             {
-                canDoubleJump = true;
-            }
-            if (Input.GetButtonDown("Jump"))
-            {
+                theRB.velocity = new Vector2(
+                    moveSpeed * Input.GetAxis("Horizontal"),
+                    theRB.velocity.y
+                );
+
+                isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
+
                 if (isGrounded)
                 {
-                    theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
-                    AudioManager.instance.PlaySFX(10);
+                    canDoubleJump = true;
                 }
-                else
+                if (Input.GetButtonDown("Jump"))
                 {
-                    if (canDoubleJump)
+                    if (isGrounded)
                     {
                         theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
-                        canDoubleJump = false;
                         AudioManager.instance.PlaySFX(10);
                     }
+                    else
+                    {
+                        if (canDoubleJump)
+                        {
+                            theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+                            canDoubleJump = false;
+                            AudioManager.instance.PlaySFX(10);
+                        }
+                    }
                 }
-            }
-            //
-            if (theRB.velocity.x < 0)
-            {
-                theSR.flipX = true;
-            }
-            else if (theRB.velocity.x > 0)
-            {
-                theSR.flipX = false;
-            }
-        }
-        else
-        {
-            knockBackCounter -= Time.deltaTime;
-            if (!theSR.flipX)
-            {
-                theRB.velocity = new Vector2(-knockBackForce, theRB.velocity.y);
+                //
+                if (theRB.velocity.x < 0)
+                {
+                    theSR.flipX = true;
+                }
+                else if (theRB.velocity.x > 0)
+                {
+                    theSR.flipX = false;
+                }
             }
             else
             {
-                theRB.velocity = new Vector2(knockBackForce, theRB.velocity.y);
+                knockBackCounter -= Time.deltaTime;
+                if (!theSR.flipX)
+                {
+                    theRB.velocity = new Vector2(-knockBackForce, theRB.velocity.y);
+                }
+                else
+                {
+                    theRB.velocity = new Vector2(knockBackForce, theRB.velocity.y);
+                }
             }
         }
         //
